@@ -1,7 +1,7 @@
 package com.vectortest.Test.entity;
 
 import javax.persistence.*;
-
+import javax.validation.constraints.NotBlank;
 @Entity
 public class User {
 
@@ -17,9 +17,11 @@ public class User {
     private String lastname;
 
     @Column(name="email")
+    @NotBlank(message="Email is a required field")
     private String email;
 
     @Column(name="password")
+    @NotBlank(message="Password is a required field")
     private String password;
 
     public int getId() {
