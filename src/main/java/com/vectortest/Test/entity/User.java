@@ -1,5 +1,4 @@
-package com.vectortest.Test.controller.entity;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+package com.vectortest.Test.entity;
 
 import javax.persistence.*;
 
