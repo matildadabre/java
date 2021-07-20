@@ -1,7 +1,9 @@
 package com.vectortest.Test.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 @Entity
 public class User {
 
@@ -17,10 +19,12 @@ public class User {
     private String lastname;
 
     @Column(name="email")
+    @Email
     @NotBlank(message="Email is a required field")
     private String email;
 
     @Column(name="password")
+    @Size(min = 6, message = "Password should have min 6 characters")
     @NotBlank(message="Password is a required field")
     private String password;
 
